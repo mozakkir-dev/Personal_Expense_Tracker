@@ -1,0 +1,157 @@
+:root {
+    --bg-color: #f1f5f9;
+    --card-color: #ffffff;
+    --primary-color: #2563eb;
+    --hover-color: #1d4ed8;
+    --text-color: #1e293b;
+    --secondary-color: #64748b;
+    --border-color: #cbd5e1;
+    --expense-bg: #f8fafc;
+    --error-color: #ef4444;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.container {
+    width: 100%;
+    max-width: 30rem;
+    background: var(--card-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    text-align: center ;
+}
+
+.total-box {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.total-box p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.total-box h2 {
+    font-size: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+}
+
+#addBtn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.9em 1.2em;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    background: var(--hover-color);
+}
+
+#errorMessage {
+    color: var(--error-color);
+    font-size: 0.85rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 1rem;
+    text-align: center;
+
+}
+
+#expenseList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.expense-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    background: var(--expense-bg);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.expense-name {
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+}
+
+.expense-amount {
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.delete-btn {
+    background: transparent;
+    color: var(--error-color);
+    border: none;
+    font-size: 1rem;
+    padding: 0.4em;
+    cursor: pointer;
+}
+.expense-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+
+.delete-btn {
+    padding: 0;
+    font-size: 0.8rem;
+}
